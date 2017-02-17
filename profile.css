@@ -1,0 +1,463 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 6vw;
+}
+
+h2 {
+    font-size: 4vw;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+button {
+    background-color: black;
+    color: white;
+}
+
+.my_content {
+    display: none;
+}
+
+/* Nav styling */
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    width: 100%;
+    text-align: center;
+}
+
+.logo_pic {
+    width: 15%;
+}
+
+.logo_text {
+    display: inline;
+    font-size: 10vw;
+    font-weight: bold;
+    vertical-align: super;
+}
+
+.nav_anchor_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav_anchor_ul li {
+    float: left;
+    width: 50%;
+}
+
+.nav_anchor_ul li a {
+    display: block;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 3vw 12vw;
+    text-decoration: none;
+    font-size: 4vw;
+}
+
+.nav_anchor_ul li a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+/* Cover Photos */
+
+.cover-photo_section {
+    background-color: white;
+}
+
+.cover-photo_wrapper {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 3vw;
+    padding: 2vw;
+}
+
+.profile_cover-photo {
+    width: 100%;
+    display: none;
+}
+
+.current_cover-photo {
+    display: block;
+}
+
+.cover-photo_controller {
+    text-align: center;
+}
+
+.cover-photo_controller button {
+    font-size: 3vw;
+    width: 20vw;
+    margin: 0 10vw;
+    background-color: black;
+    color: white;
+}
+
+/* Profile styling */
+
+.name_tag {
+    width: 20vw;
+    font-size: 3.5vw;
+    text-align: center;
+    float: left;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.profile_photo {
+    width: 20vw;
+    border-radius: 50%;
+    margin-bottom: 2vw;
+}
+
+.name_tag p {
+    padding: 0;
+    margin: 0;
+}
+
+.profile_name {
+    font-weight: bold;
+}
+
+.location {
+    font-style: italic;
+    font-size: 2.5vw;
+}
+
+.profile_info:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.profile_table {
+    padding-right: 5vw;
+    border-spacing: 0 5vw;
+}
+
+.profile_table td,th {
+    vertical-align: top;
+    text-align: left;
+    font-size: 4vw;
+}
+
+.profile_table ul {
+    margin: 0;
+}
+
+/* Post feed styling */
+
+#empty_feed_msg {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.posting_section {
+    padding: 3vw;
+}
+
+.posting_input {
+    width: 75vw;
+    font-size: 3vw;
+}
+
+.posting_button {
+    width: 10vw;
+    font-size: 3vw;
+}
+
+.post_form_wrapper {
+    text-align: center;
+}
+
+.post_feed {
+    text-align: center;
+    padding: 0 7vw;
+}
+
+.post {
+    font-size: 5vw;
+    padding: 2vw 1vw;
+    border-radius: 20%;
+    border-width: 1px;
+    border-style: dotted none;
+    text-align: center;
+}
+
+.post_content {
+    width: 90%;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+
+.post_content img {
+    width: 90%;
+}
+
+.post_second_row {
+    text-align: right;
+    margin-bottom: 2vw;
+    padding-right: 10vw;
+}
+
+.post_time {
+    font-size: 3vw;
+    margin: 0;
+    display: inline-block;
+    vertical-align: super;
+    padding-right: 20vw;
+}
+
+.post_like {
+    width: 8vw;
+}
+
+.post_count {
+    font-size: 5vw;
+    margin: 0;
+    display: inline-block;
+    vertical-align: super;
+    padding-left: 1vw;
+}
+
+.post_name_tag {
+    width: 50px;
+    position: absolute;
+    margin-top: -2%;
+    margin-left: -2%;
+}
+
+.post_name_tag img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.post_name_tag p {
+    margin: 0;
+    font-size: 50%;
+}
+
+/* Responsive styling adjustments */
+
+@media screen and (min-width: 480px) {
+
+    /* Style nav bar into one row */
+
+    .nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 10vw;
+    }
+
+    .logo {
+        width: 25%;
+        text-align: center;
+        height: 100%;
+        float: left;
+        padding: 1vw 0;
+        background-color: black;
+    }
+
+    .logo_pic {
+        height: 80%;
+        width: auto;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .logo_text {
+        display: block;
+        font-size: 2vw;
+        margin: 0;
+        color: white;
+    }
+
+    .nav_anchor_ul {
+        height: 100%;
+        padding-top: 2vw;
+        background-color: black;
+    }
+
+    .nav_anchor_ul li a {
+        padding: 3vw 8vw;
+        font-size: 3.5vw;
+    }
+
+    /* Style posting forms into one row */
+
+    .posting_forms {
+        text-align: center;
+    }
+
+    .posting_forms h2 {
+        text-align: left;
+    }
+
+    .posting_section {
+        display: inline-block;
+        padding: 0;
+        width: 45%;
+    }
+
+    .posting_input {
+        width: 95%;
+    }
+
+    .posting_button {
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+        margin-left: 30vw;
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    .nav {
+        height: 5vw;
+    }
+
+    .nav_anchor_ul li a {
+        font-size: 3vw;
+        padding: 1vw 8vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+
+    .logo_text {
+        font-size: 1.5vw;
+    }
+
+    .cover-photo_controller button {
+        font-size: 2vw;
+        width: 15vw;
+    }
+
+    .name_tag {
+        font-size: 2vw;
+    }
+
+    .location {
+        font-size: 1.5vw;
+    }
+
+    .profile_table td,th {
+        font-size: 2vw;
+    }
+
+    #empty_feed_msg {
+        font-size: 2vw;
+    }
+
+    .post {
+        font-size: 30px;
+        padding: 10px 30px;
+        /*display: inline-block;*/
+        float: left;
+        width: 40%;
+    }
+
+    .post_feed:after {
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+    }
+
+    .post_content {
+        margin-top: 10px;
+        margin-bottom: 15px;
+
+    }
+
+    .post_time {
+        font-size: 18px;
+        float: left;
+        padding-right: 0;
+    }
+
+    .post_like {
+        width: 40px;
+    }
+
+    .post_count {
+        font-size: 28px;
+        padding-left: 4px;
+    }
+
+    .post_second_row {
+        padding-right: 2.5vw;
+        margin-bottom: 4px;
+    }
+
+    .posting_input {
+        font-size: 2vw;
+    }
+
+    .posting_button {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    .nav {
+        height: 30px;
+    }
+
+    .logo {
+        padding: 10px 0;
+    }
+
+    .logo_text {
+        display: inline;
+        font-size: 20px;
+        vertical-align: bottom;
+    }
+
+    .nav_anchor_ul {
+        height: 50px;
+        padding: 0;
+    }
+
+    .nav_anchor_ul li a {
+        font-size: 20px;
+        height: 100%;
+        padding: 15px 0 0 0;
+    }
+}

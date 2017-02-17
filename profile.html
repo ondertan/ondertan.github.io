@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nyan My Cat</title>
+        <link rel="stylesheet" href="profile.css">
+    </head>
+    <body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <div class="my_content">
+        <!--Navigation-->
+        <nav class="nav test--nav">
+            <!--logo containing a pic and the website name-->
+            <div class="logo">
+                <img class="logo_pic" src="img/cat_paw.png" alt="Meow!">
+                <p class="logo_text">Nyan My Cat</p>
+            </div>
+            <!--list of links to different sections in the page-->
+            <ul class="nav_anchor_ul">
+                <li title="Nyan's Profile"><a href="javascript: gotoAboutNyan()">About Nyan</a></li>
+                <li title="Nyan's Profile Feed"><a href="javascript: gotoFeed()">Nyan's Diary</a></li>
+            </ul>
+        </nav>
+
+        <!--Cover Photo-->
+        <section class="cover-photo_section">
+            <div class="cover-photo_wrapper">
+                <img data-order="1" class="current_cover-photo profile_cover-photo test--profile_cover-photo" src="img/cover1.PNG" alt="Cover Photo 1" title="Cover Photo 1">
+                <img data-order="2" class="profile_cover-photo test--profile_cover-photo" src="img/cover2.PNG" alt="Cover Photo 2"  title="Cover Photo 2">
+                <img data-order="3" class="profile_cover-photo test--profile_cover-photo" src="img/cover3.PNG" alt="Cover Photo 3"  title="Cover Photo 3">
+            </div>
+            <div class="cover-photo_controller">
+                <button id="previous_button" type="button">Previous</button>
+                <button id="next_button" type="button">Next</button>
+            </div>
+        </section>
+        <hr>
+
+        <!--Profile Info-->
+        <section class="profile_info" id="profile_info">
+            <h1>About Nyan</h1>
+            <div class="name_tag">
+                <img class="profile_photo test--profile_photo" src="img/profile_pic.PNG" alt="profile photo">
+                <p class="profile_name test--profile_name">Nyan</p>
+                <hr>
+                <p>Pet</p>
+                <p class="location test--profile_location">Toronto</p>
+            </div>
+            <table class="profile_table">
+                <tr>
+                    <th scope="row" class="test--profile_hobbies">Hobbies:</th>
+                    <td>
+                        <ul>
+                            <li>Chicken flavored food</li>
+                            <li>Raw fish (Sashimi!)</li>
+                            <li>Daydreaming</li>
+                            <li>Poo</li>
+                            <li>Scratch</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="test--profile_bio">Bio:</th>
+                    <td>A two-year-old American Shorthair who eats and sleeps all day.
+                        Never knock things over. Loved by his Master.</td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+
+        <!--Contact Author-->
+        <section class="profile_info">
+            <h1>Contact Nyan's Master</h1>
+            <div class="name_tag">
+                <img class="profile_photo" src="img/master_pic.PNG" alt="author photo">
+                <p class="profile_name">Cinny Cao</p><hr>Student<br><p class="location">Toronto</p>
+            </div>
+            <table  class="profile_table">
+                <tr>
+                    <th scope="row">GitHub Account: </th>
+                    <td>CinnyCao</td>
+                </tr>
+                <tr>
+                    <th scope="row">Visit My Profile: </th>
+                    <td class="test--profile_links">
+                        <ul>
+                            <li>
+                                <a class="test--profile_links"
+                                   href="https://github.com/CinnyCao"
+                                   target="_blank">My GitHub Profile</a>
+                            </li>
+                            <li>
+                                <a class="test--profile_links"
+                                   href="https://www.linkedin.com/in/huimin-cinny-cao-2b191080?trk=hp-identity-photo"
+                                   target="_blank">My LinkedIn</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!--Profile Feed-->
+        <section class="feed" id="feed">
+            <h1>Nyan's Diary</h1>
+            <section class="post_feed test--post_feed">
+                <p id="empty_feed_msg">Oops! Nyan left nothing here.</p>
+            </section>
+            <section class="posting_forms">
+                <!--test posts form-->
+                <section class="posting_section">
+                    <h2>Write a thought</h2>
+                    <div class="post_form_wrapper">
+                        <input class="posting_input input_text test--input_text" type="text" placeholder="Say something here.">
+                        <button type="submit" class="posting_button input_button test--input_button">Post</button>
+                    </div>
+                </section>
+                <!--photo posts form-->
+                <section class="posting_section">
+                    <h2>Leave a photo</h2>
+                    <div class="post_form_wrapper">
+                        <input class="posting_input photo_url test--photo_url" type="url" placeholder="Put image url here.">
+                        <button type="submit" class="posting_button photo_button test--photo_button">Post</button>
+                    </div>
+                </section>
+            </section>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="profile.js"></script>
+    </div>
+    </body>
+</html>
+
