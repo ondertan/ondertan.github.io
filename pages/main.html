@@ -13,7 +13,9 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script> <!-- popup plugin -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- font awesome -->
+
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -217,6 +219,17 @@
     </div>
   </div>
 </nav>
+
+
+ <div id="warning_popup">
+
+    This website is not complete yet, so please dont judge me.
+
+    <!-- Add an optional button to close the popup -->
+    <button class="my_popup_close">Close</button>
+
+  </div>
+
 
 <div class="jumbotron text-center">
   <h1>Tanay Onder</h1> 
@@ -482,6 +495,11 @@ marker.setMap(map);
 </footer>
 
 <script>
+$(window).on('load',function() {
+      // Initialize the plugin
+      $('#warning_popup').popup();
+
+});
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
