@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- font awesome -->
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onLoad="popupWin()">
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -41,17 +41,6 @@
     </div>
   </div>
 </nav>
-
-
- <div id="warning_popup">
-
-    This website is not complete yet, so please dont judge me.
-
-    <!-- Add an optional button to close the popup -->
-    <button class="my_popup_close">Close</button>
-
-  </div>
-
 
 <div class="jumbotron text-center">
   <h1>Tanay Onder</h1> 
@@ -317,13 +306,23 @@ marker.setMap(map);
 </footer>
 
 <script>
-$(document).on('load',function() {
-      // Initialize the plugin
-      $('#warning_popup').popup();
+function popupWin() {
+text =  "<html>\n<head>\n<title>Pop Window</title>\n<body>\n";
+text += "<center>\n<br>";
+text += "<a href='http://www.javascriptsource.com/new' target='_blank'><h2>New JavaScripts</h2></a>";
+text += "</center>\n</body>\n</html>\n";
+setTimeout('windowProp(text)', 3000); 		// delay 3 seconds before opening
+}
+function windowProp(text) {
+newWindow = window.open('','newWin','width=300,height=100');
+newWindow.document.write(text);
+setTimeout('closeWin(newWindow)', 5000);	// delay 5 seconds before closing
+}
+function closeWin(newWindow) {
+newWindow.close();				// close small window and depart
+}
 
-});
 $(document).ready(function(){
-  $('#warning_popup').popup();
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
